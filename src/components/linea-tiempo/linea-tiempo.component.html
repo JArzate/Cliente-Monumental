@@ -1,0 +1,46 @@
+<div class="container-fluid animated fadeIn">
+
+  <div class="row">
+    <img src="assets/imagenes/fondos/Fondo-Linea.jpg" class="fondo fixed">
+  </div>
+
+  <!-- toolbar -->
+  <div class="row header margin-top">
+    <div class="col-lg-1">
+      <img src="assets/imagenes/iconos/atras.png" height="120" [routerLink]="['/menu']">
+    </div>
+    <div class="col-lg-2" style="padding: 20px 0 0 40px;">
+      <span class="texto-blanco font-36">Atrás</span>
+    </div>
+    <div class="col-lg-9 text-right titulo-vista">
+      <span class="texto-blanco font-36">Línea de tiempo</span>
+    </div>
+  </div>
+
+  <div class="desliza" *ngIf="Desliza">
+    <img src="../../assets/imagenes/iconos/Desliza-Arriba.gif" class="img-desliza">
+  </div>
+
+  <!-- linea -->
+  <div class="hide-scroll">
+    <div class="viewport">
+      <vertical-timeline>
+        <vertical-timeline-card *ngFor="let index of Array" color="#733b03" timeString="1954">
+          <div class="row padding">
+            <img src="../../assets/imagenes/fondos/Fondo-Galeria.jpg" height=270 width=500>
+          </div>
+          <div class="row">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem optio excepturi, 
+            aut ratione ullam voluptatibus qui asperiores laborum. Dignissimos officia culpa 
+            quae labore esse exercitationem pariatur consectetur maiores dicta laudantium.
+          </div>
+          <div class="audio text-right">
+              <img src="../../assets/imagenes/iconos/audio.png" height="50">
+          </div>
+        </vertical-timeline-card>
+      </vertical-timeline>
+    </div>
+
+  </div>
+
+</div>

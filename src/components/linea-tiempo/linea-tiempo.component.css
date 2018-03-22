@@ -1,0 +1,26 @@
+.hide-scroll {
+    overflow: hidden;
+}
+
+.viewport {
+    margin-top: 0%;
+    overflow: auto;
+    max-height: 728px;
+    margin-right: -100px;
+    padding-right: 100px;
+}
+
+.desliza{
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    z-index: 1;
+}
+
+.img-desliza{
+    width: 50%;
+}
+
+.padding{
+    padding: 3% 0%;
+}

@@ -1,0 +1,12 @@
+<!-- Pantalla BIenvenida -->
+<!-- routerLink es una directiva que hace la funcion de un href, es decir tiene la direccion o el nommbre de la ruta
+a donde ira, sigue la sintaxis de un vector ya que sigue la direccio por directorio " algo / menu / 3", donde cada valor
+es una posicion del vector " ['algo','menu','3'] "  -->
+
+<div class="no-margin" [routerLink]="['menu']">
+  <img src="assets/imagenes/fondos/Pantalla-Inactiva.jpg" class="fondo relativo">
+  <img src="assets/imagenes/logo/Logo-Monumental.png" class="absoluto" width="800" style="left:24%; top:10%;">
+  <h1 class="absoluto texto-blanco font-36 titulo-tocar-pantalla" style="top: 75%; left:15%">
+    {{"Toca la pantalla para ir al menú principal" | uppercase}}
+  </h1>
+</div>
