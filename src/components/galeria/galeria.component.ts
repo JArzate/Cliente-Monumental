@@ -24,7 +24,7 @@ export class GaleriaComponent implements OnInit {
       + "una imagen para verla en tamaño real."
     this.Speech.text = this.Text;
     setTimeout(()=>{
-      window.speechSynthesis.speak(this.Speech);
+      //window.speechSynthesis.speak(this.Speech);
     },1500);
 
     //Confiuracion del servicio de facebook

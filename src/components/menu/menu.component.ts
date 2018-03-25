@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
     this.Texto = "Elige una opción del menú";
     this.Speech.text = this.Texto;
     setTimeout(() => {
-     window.speechSynthesis.speak(this.Speech);
+     //window.speechSynthesis.speak(this.Speech);
     }, 1500);
   }
 

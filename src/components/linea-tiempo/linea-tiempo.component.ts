@@ -17,7 +17,7 @@ export class LineaTiempoComponent implements OnInit, OnDestroy {
     this.Text = "Deliza la pantalla para ver mas contenido de la línea de tiempo, preciona el icono del sonido para leerlo por ti.";
     this.Speech.text = this.Text;
     setTimeout(()=>{
-      window.speechSynthesis.speak(this.Speech);
+      //window.speechSynthesis.speak(this.Speech);
     },1500);
 
     this.Interval = setInterval(
