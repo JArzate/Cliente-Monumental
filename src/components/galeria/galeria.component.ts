@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-galeria',
   templateUrl: './galeria.component.html',
-  styleUrls: ['./galeria.component.css'],
+  styleUrls: ['./galeria.component.scss'],
   providers: [FacebookService]
 })
 export class GaleriaComponent implements OnInit {

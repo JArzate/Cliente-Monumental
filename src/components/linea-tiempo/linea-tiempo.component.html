@@ -1,7 +1,7 @@
 <div class="container-fluid animated fadeIn">
 
   <div class="row filtro">
-    <img src="assets/imagenes/fondos/Fondo-Linea.jpg" class="full-width fondo">
+    <img src="assets/imagenes/fondos/Fondo-Linea.jpg" class="fondo">
   </div>
 
   <!-- toolbar -->
@@ -27,7 +27,7 @@
       <vertical-timeline>
         <vertical-timeline-card *ngFor="let index of Array" color="#733b03" timeString="1954">
           <div class="row padding">
-            <img src="../../assets/imagenes/fondos/Fondo-Galeria.jpg" height=270 width=500>
+            <img src="../../assets/imagenes/fondos/Fondo-Galeria.jpg" class="img-suceso">
           </div>
           <div class="row">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem optio excepturi, 
@@ -35,7 +35,7 @@
             quae labore esse exercitationem pariatur consectetur maiores dicta laudantium.
           </div>
           <div class="audio text-right">
-              <img src="../../assets/imagenes/iconos/audio.png" height="50">
+              <img src="../../assets/imagenes/iconos/audio.png" class="icono-sonido" (click)="LeerTexto('Hola')">
           </div>
         </vertical-timeline-card>
       </vertical-timeline>

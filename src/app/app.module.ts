@@ -16,7 +16,8 @@ import { GaleriaComponent } from '../components/galeria/galeria.component';
 import { InicialComponent } from '../components/inicial/inicial.component';
 import { MenuComponent } from '../components/menu/menu.component';
 import { LineaTiempoComponent } from './../components/linea-tiempo/linea-tiempo.component';
-import {VerticalTimelineModule} from 'angular-vertical-timeline'; 
+import {VerticalTimelineModule} from 'angular-vertical-timeline';
+import { SeleccionMapaComponent } from '../components/seleccion-mapa/seleccion-mapa.component'; 
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {VerticalTimelineModule} from 'angular-vertical-timeline';
     GaleriaComponent,
     InicialComponent,
     MenuComponent,
-    LineaTiempoComponent
+    LineaTiempoComponent,
+    SeleccionMapaComponent
   ],
   imports: [
     BrowserModule,
