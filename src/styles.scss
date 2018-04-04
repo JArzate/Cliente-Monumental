@@ -3,21 +3,6 @@
 @import "~angular-vertical-timeline/dist/vertical-timeline.scss";
  
 
-.full-width{
-    width: 100%;
-}
-
-.fixed {
-    position: fixed;
-}
-
-.relativo{
-    position: relative;
-}
-
-.absoluto{
-    position: absolute;
-}
 
 .texto-blanco{
     color: white;
@@ -27,23 +12,14 @@
     font-size: 36pt;
 }
 
-.titulo-tocar-pantalla{
-    font-family: "Lemon/Milk";
-}
-
-.margin-top{
-    margin-top: 1%;
+body{
+    font-family: "LemonMilk";
 }
 
 .titulo-vista{
-    padding: 1% 0% 0 0; 
+    padding: 1% 0%;
     background: rgba(0, 0, 0, 0.3);
 }
-
-.no-margin{
-    margin: 0;
-}
-
-.no-padding{
-    padding: 0;
+.atras{
+    padding: 0% 10%;
 }

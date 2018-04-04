@@ -19,10 +19,6 @@
     z-index: -1;
 }
 
-.header {
-    height: 120px;
-}
-
 .margin{
     margin: 0 25px 0 75px; 
 }
@@ -33,12 +29,6 @@
 
 .padding-top{
     padding-top: 3%;
-}
-
-.photo-list{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
 }
 
 .arrow{
@@ -52,15 +42,28 @@
 }
 
 .framework{
+    position: relative;
     height: 500px;
     margin-bottom: 20px;
 }
 
 .image-on-view{
+    position: relative;
     border: solid 5px white;
     height: 100%;
     max-width: 100%;
     filter: drop-shadow(black 0px 0px 5px);
+}
+
+.impresora-icon{
+    color: white;
+    position: absolute;
+    z-index: 1;
+    height: 80%;    
+    right: 5%;
+    top: 10%;
+    filter: drop-shadow(rgba(0,0,0,0.5) 2px 2px);
+    cursor: pointer;
 }
 
 .opacity{
@@ -70,7 +73,3 @@
 .active-photo{
     opacity: 1;
 } 
-
-.container-fluid{
-    overflow: hidden;
-}

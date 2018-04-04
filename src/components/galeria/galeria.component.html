@@ -1,21 +1,23 @@
-<div class="container-fluid animated fadeIn">
+<div class="container-fluid">
 
   <div class="row filtro">
     <img src="assets/imagenes/fondos/Fondo-Galeria.jpg" class="fondo">
   </div>
-  
+
   <!-- toolbar -->
-  <div class="row header margin-top">
+  <div class="row header align-items-center">
     <div class="col-lg-1">
       <img src="assets/imagenes/iconos/atras.png" height="120" [routerLink]="['/menu']">
     </div>
-    <div class="col-lg-2" style="padding: 20px 0 0 40px;">
-      <span class="texto-blanco font-36">Atrás</span>
+    <div class="col-lg-2">
+      <span class="texto-blanco font-36 atras">Atrás</span>
     </div>
-    <div class="col-lg-9 text-right titulo-vista">
+    <div class="col-lg-9 text-left titulo-vista">
+      <img src="assets/imagenes/iconos/impresora.png" class="impresora-icon">
       <span class="texto-blanco font-36">Galeria Fotográfica</span>
     </div>
   </div>
+
   <!-- Contenedor de las imagenes -->
   <div class="row justify-content-center padding-top">
     <div class=" relativo col-lg-10 framework text-center">
@@ -24,7 +26,7 @@
   </div>
 
   <!-- Preview de fotos-->
-  <div class="row relativo justify-content-center align-items-center animated lightSpeedIn">
+  <div class="row justify-content-center align-items-center ">
     <div class="col-lg-1" *ngIf="Prev_page != null">
       <span class="arrow" (click)="PrevImages()">◄</span>
     </div>

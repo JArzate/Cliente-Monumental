@@ -13,7 +13,6 @@ const routes: Routes = [
     { path: '', component: InicialComponent },
     { path: 'menu', component: MenuComponent },
     { path: 'menu/historia', component: LineaTiempoComponent },
-    { path: 'menu/mapa', component: GaleriaComponent },
     { path: 'menu/galeria', component: GaleriaComponent },
     { path: 'menu/eventos', component: GaleriaComponent },
     { path: '**', pathMatch:'full', redirectTo: 'routePath' } //Cuando no encuentra alguna ruta de las especificadas

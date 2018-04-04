@@ -23,9 +23,9 @@ export class GaleriaComponent implements OnInit {
     this.Text = "Pulsa las flechas en la parte inferior de la pantalla para cargar más imagenes, selecciona "
       + "una imagen para verla en tamaño real."
     this.Speech.text = this.Text;
-    setTimeout(()=>{
+    setTimeout(() => {
       //window.speechSynthesis.speak(this.Speech);
-    },1500);
+    }, 1500);
 
     //Confiuracion del servicio de facebook
     let initParams: InitParams = {
@@ -229,6 +229,10 @@ export class GaleriaComponent implements OnInit {
         imgs[index].classList.remove('pulse');
       }
     }
+  }
+
+  ImprimirImagen = () => {
+    
   }
 
 }
