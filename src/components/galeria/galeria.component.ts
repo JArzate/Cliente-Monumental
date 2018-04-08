@@ -1,4 +1,3 @@
-import { element } from 'protractor';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FacebookService, InitParams, LoginResponse } from 'ngx-facebook';
 import { Component, OnInit } from '@angular/core';
@@ -16,7 +15,12 @@ export class GaleriaComponent implements OnInit {
   public Next_page: string = null;
   public Prev_page: string = null;
   public SelectedImage: string;
-  constructor(public _facebookService: FacebookService, public _router: Router, public _route: ActivatedRoute) {
+  public isPrinting: boolean;
+  public ImprimirBool = false;
+  constructor(
+    public _facebookService: FacebookService,
+    public _router: Router,
+    public _route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -231,8 +235,19 @@ export class GaleriaComponent implements OnInit {
     }
   }
 
-  ImprimirImagen = () => {
-    
+  Imprimir = () => {
+    this.ImprimirBool = true;
+    var progreso:number = 0;
+    var interval = setInterval(
+      () => {
+        document.getElementById("barra-progreso").style.width = progreso + '%';
+        if (progreso >= 100) {
+          this.ImprimirBool = false;
+          this.isPrinting = false;
+          clearInterval(interval);
+        }
+        progreso += 10;
+      }, 500);
   }
 
 }

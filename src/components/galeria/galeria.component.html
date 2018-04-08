@@ -4,6 +4,26 @@
     <img src="assets/imagenes/fondos/Fondo-Galeria.jpg" class="fondo">
   </div>
 
+  <!-- Modal -->
+  <app-modal-dialog [visible]="isPrinting">
+    <app-imprimir-imagen [Imagen]="SelectedImage"></app-imprimir-imagen>
+    <div class="row mb-3 justify-content-center" *ngIf="!ImprimirBool">
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-warning text-white btn-block" (click)="Imprimir()"> Imprimir</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-danger btn-block" (click)="isPrinting=!isPrinting"> Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="progress" *ngIf="ImprimirBool">
+      <div class="progress-bar bg-danger p-1" role="progressbar" id="barra-progreso">Imprimiendo...</div>
+    </div>
+  </app-modal-dialog>
+
   <!-- toolbar -->
   <div class="row header align-items-center">
     <div class="col-lg-1">
@@ -13,7 +33,7 @@
       <span class="texto-blanco font-36 atras">Atrás</span>
     </div>
     <div class="col-lg-9 text-left titulo-vista">
-      <img src="assets/imagenes/iconos/impresora.png" class="impresora-icon">
+      <img src="assets/imagenes/iconos/impresora.png" class="impresora-icon" (click)="isPrinting = !isPrinting">
       <span class="texto-blanco font-36">Galeria Fotográfica</span>
     </div>
   </div>

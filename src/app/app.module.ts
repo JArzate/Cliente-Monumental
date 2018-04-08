@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 //Estilos
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
-  MatDialogModule
+  MatProgressBarModule,
+  MatCardModule
 } from '@angular/material';
 
 
@@ -13,6 +14,8 @@ import {
 
 //Servicios
 import { FacebookModule } from 'ngx-facebook';
+import { AgmCoreModule } from '@agm/core';     
+import { AgmDirectionModule } from 'agm-direction';
 
 //Rutas
 import { appRouting } from './app.routes';
@@ -24,6 +27,9 @@ import { InicialComponent } from '../components/inicial/inicial.component';
 import { MenuComponent } from '../components/menu/menu.component';
 import { LineaTiempoComponent } from './../components/linea-tiempo/linea-tiempo.component';
 import { VerticalTimelineModule } from 'angular-vertical-timeline';
+import { ComoLlegarComponent } from './../components/como-llegar/como-llegar.component';
+import { ModalDialogComponent } from './../components/modal-dialog/modal-dialog.component';
+import { ImprimirImagenComponent } from './../components/imprimir-imagen/imprimir-imagen.component';
 
 
 @NgModule({
@@ -33,15 +39,23 @@ import { VerticalTimelineModule } from 'angular-vertical-timeline';
     InicialComponent,
     MenuComponent,
     LineaTiempoComponent,
+    ComoLlegarComponent,
+    ModalDialogComponent,
+    ImprimirImagenComponent
   ],
   imports: [
     BrowserModule,
     appRouting,
+    AgmCoreModule.forRoot({ 
+      apiKey: 'AIzaSyDDDyV5ypJgFhT6YM4PEPT5mbdy8zCV9lA',
+    }),
+    AgmDirectionModule,
     FacebookModule.forRoot(),
     VerticalTimelineModule,
     BrowserAnimationsModule,
     //MaterialComponents
-    MatDialogModule
+    MatProgressBarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

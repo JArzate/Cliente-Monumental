@@ -1,3 +1,4 @@
+import { ComoLlegarComponent } from './../components/como-llegar/como-llegar.component';
 import { Component } from '@angular/core';
 //Aqui se guardan las rutas para que se puedan cambiar las vistas ( no recarga solo cambia la vista)
 import { RouterModule, Routes } from '@angular/router';
@@ -12,7 +13,7 @@ import { GaleriaComponent } from './../components/galeria/galeria.component';
 const routes: Routes = [
     { path: '', component: InicialComponent },
     { path: 'menu', component: MenuComponent },
-    { path: 'menu/historia', component: LineaTiempoComponent },
+    { path: 'menu/llegar', component: ComoLlegarComponent },
     { path: 'menu/galeria', component: GaleriaComponent },
     { path: 'menu/eventos', component: GaleriaComponent },
     { path: '**', pathMatch:'full', redirectTo: 'routePath' } //Cuando no encuentra alguna ruta de las especificadas

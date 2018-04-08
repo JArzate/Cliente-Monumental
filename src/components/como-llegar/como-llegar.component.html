@@ -1,0 +1,97 @@
+<div class="container-fluid">
+
+  <div class="row filtro">
+    <img src="assets/imagenes/fondos/Fondo-ComoLlegar.jpg" class="fondo">
+  </div>
+
+  <div class="row header align-items-center">
+    <div class="col-lg-1">
+      <img src="assets/imagenes/iconos/atras.png" height="120" [routerLink]="['/menu']">
+    </div>
+    <div class="col-lg-2">
+      <span class="texto-blanco font-36 atras">Atrás</span>
+    </div>
+    <div class="col-lg-9 text-left titulo-vista">
+      <span class="texto-blanco font-36">¿Cómo llegar?</span>
+    </div>
+  </div>
+
+  <div class="row justify-content-center contenedor">
+    <div class="col-sm-2">
+
+      <div class="card text-white text-left mt-3 mb-3" (click)="TrazarRuta(21.863221,-102.321381,$event)">
+        <img class="img-fluid" src="assets/imagenes/fondos/Fondo-Mapa-Isla.jpg">
+        <div class="card-img-overlay">
+          <h5 class="card-title sideL">Isla
+            <br>San Marcos</h5>
+        </div>
+      </div>
+
+      <div class="card text-white text-left mt-3 mb-3" (click)="TrazarRuta(21.8759791,-102.3051812,$event)">
+        <img class="img-fluid" src="assets/imagenes/fondos/Fondo-Mapa-Expo.jpg">
+        <div class="card-img-overlay">
+          <h5 class="card-title sideL">Expo Plaza</h5>
+        </div>
+      </div>
+
+      <div class="card text-white text-left mt-3 mb-3" (click)="TrazarRuta(21.876735, -102.301524,$event)">
+        <img class="img-fluid" src="assets/imagenes/fondos/Fondo-Mapa-Encierro.jpg">
+        <div class="card-img-overlay">
+          <h5 class="card-title sideL">El Encierro</h5>
+        </div>
+      </div>
+
+      <div class="card text-white text-left mt-3 mb-3" (click)="TrazarRuta(21.879361, -102.303271,$event)">
+        <img class="img-fluid" src="assets/imagenes/fondos/Fondo-Mapa-Jardin.jpg">
+        <div class="card-img-overlay">
+          <h5 class="card-title sideL">Jardín 
+            <br> de San Marcos</h5>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-8 align-items-center">
+      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [streetViewControl]="true">
+        <!-- Marcador de rutas -->
+        <agm-direction *ngIf="Direccion" [origin]="Direccion.Origen" [destination]="Direccion.Destino" [travelMode]="'WALKING'"></agm-direction>
+        <!-- Marcador -->
+        <agm-marker [latitude]="lat" [longitude]="lng">
+          <agm-info-window [isOpen]="true">
+            <p class="font-weight-bold">Estas aquí:</p>
+            <p>Plaza de Toros Monumental</p>
+          </agm-info-window>
+
+        </agm-marker>
+      </agm-map>
+    </div>
+    <div class="col-sm-2">
+      <div class="card text-white text-right mt-3 mb-3" (click)="TrazarRuta(21.876148, -102.302634,$event)">
+        <img class="img-fluid" src="assets/imagenes/fondos/Fondo-Mapa-Antros.jpg">
+        <div class="card-img-overlay">
+          <h5 class="card-title sideR">Zona de Antros</h5>
+        </div>
+      </div>
+
+      <div class="card text-white text-right mt-3 mb-3" (click)="TrazarRuta(21.8785517,-102.3042872,$event)">
+        <img class="img-fluid" src="assets/imagenes/fondos/Fondo-Mapa-Palenque.jpg">
+        <div class="card-img-overlay">
+          <h5 class="card-title sideR">Palenque</h5>
+        </div>
+      </div>
+
+      <div class="card text-white text-right mt-3 mb-3" (click)="TrazarRuta(21.871949, -102.308587,$event)">
+        <img class="img-fluid" src="assets/imagenes/fondos/Fondo-Mapa-ForoEstrellas.jpg">
+        <div class="card-img-overlay">
+          <h5 class="card-title sideR">Foro <br>de las Estrellas</h5>
+        </div>
+      </div>
+
+      <div class="card text-white text-right mt-3 mb-3" (click)="TrazarRuta(21.875508, -102.304584,$event)">
+        <img class="img-fluid" src="assets/imagenes/fondos/Fondo-Mapa-ForoLago.jpg">
+        <div class="card-img-overlay">
+          <h5 class="card-title sideR">Foro <br>del Lago</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

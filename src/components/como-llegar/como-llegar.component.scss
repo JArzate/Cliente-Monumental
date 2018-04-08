@@ -1,0 +1,67 @@
+agm-map {
+    height: 81.5vh;
+}
+
+.card {
+    img {
+        width: 100%;
+        height: 17.5vh;
+        filter: grayscale(1);
+    }
+}
+
+.container-fluid {
+    overflow: hidden;
+}
+
+.contenedor {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1% 0%;
+    margin: 0%;
+    border-radius: 10px;
+}
+
+.fondo {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.filtro::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.card-title {
+    position: absolute;
+   font-size: 150%;
+    filter: drop-shadow(rgba(0, 0, 0, 1) 2px 2px);
+}
+
+.sideL {
+    top: 0;
+    left: 5%;
+}
+
+.sideR {
+    bottom: 0;
+    right: 5%;
+}
+
+.card-img-overlay {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.activo {
+    transition: ease-out 350ms;
+    border: white 5px double;    
+}
