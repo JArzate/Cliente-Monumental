@@ -30,6 +30,7 @@ import { VerticalTimelineModule } from 'angular-vertical-timeline';
 import { ComoLlegarComponent } from './../components/como-llegar/como-llegar.component';
 import { ModalDialogComponent } from './../components/modal-dialog/modal-dialog.component';
 import { ImprimirImagenComponent } from './../components/imprimir-imagen/imprimir-imagen.component';
+import { EventosMenuComponent } from './../components/eventos-menu/eventos-menu.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ImprimirImagenComponent } from './../components/imprimir-imagen/imprimi
     LineaTiempoComponent,
     ComoLlegarComponent,
     ModalDialogComponent,
-    ImprimirImagenComponent
+    ImprimirImagenComponent,
+    EventosMenuComponent
   ],
   imports: [
     BrowserModule,
