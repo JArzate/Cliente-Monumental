@@ -1,0 +1,70 @@
+.fondo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.filtro::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+div{
+    color:White;
+}
+
+#ficha-evento{
+    padding: 2% 0%;
+
+    img{
+        border-radius: 10px;
+        filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
+    }
+}
+
+table{
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,1);
+    background: rgba(0,0,0,0.25);
+    th{
+        color: rgba(255, 192, 0, 1);
+        border: 1px solid rgba(255,255,255,1);
+        padding: 2% 5%;
+        font-weight: bold;
+        font-size: 180%;
+        text-align: center;
+    }
+
+    td{
+        padding: 4.5% 5%;
+        border: 1px solid rgba(255,255,255,1);
+        text-align: center;
+    }
+}
+
+#lista-participantes{
+    list-style: none;
+
+    .participante-item{
+        display: inline-block;
+
+        &:not(:last-child)::after{
+            content: "|";
+            padding: 0 15px;
+        }
+    }
+}
+
+.img-width{
+    width: 31%;
+}
+
+.btn{
+    font-size: 180%;
+}

@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row filtro">
+    <img src="assets/imagenes/fondos/Fondo-Eventos.jpg" class="fondo"/>
+  </div>
+
+  <div class="row header align-items-center">
+    <div class="col-lg-1">
+      <img src="assets/imagenes/iconos/atras.png" height="120" (click)="regresar()">
+    </div>
+    <div class="col-lg-2">
+      <span class="texto-blanco font-36 atras">Atrás</span>
+    </div>
+    <div class="col-lg-9 text-left titulo-vista">
+      <span class="texto-blanco font-36">Próximos Eventos</span>
+    </div>
+  </div>
+
+  <div class="row mt-5 justify-content-center">
+    <div class="col-sm-2 text-center flecha flechaI" *ngIf="ant_Pagina>=1">
+      <span (click)="anteriorEvento()">◄</span>
+    </div>
+
+    <div class="col-sm-8" [routerLink]="['ficha-evento',{evento_id:evento.evento_id}]" *ngIf="tipo_Evento == 1">
+      <div class="imagen-evento">
+        <img [src]="'assets/imagenes/eventos/' + evento.imagen" class="w-100">
+      </div>
+    </div>
+
+    <div class="col-sm-8 text-center" *ngIf="tipo_Evento == 2">
+        <img [src]="'assets/imagenes/eventos/' + evento.imagen" class="img-width imagen-evento" [routerLink]="['ficha-evento',{evento_id:evento.evento_id}]">
+    </div>
+
+    <div class="col-sm-2 text-center flecha flechaR" id="flecha-adelante" *ngIf="sig_Pagina <= total_Eventos">
+      <span (click)="siguienteEvento()"> ► </span>
+    </div>
+  </div>
+
+  <div class="mt-3 row justify-content-center text-white">
+    <h1>{{evento.titulo}}</h1>
+  </div>
+</div>

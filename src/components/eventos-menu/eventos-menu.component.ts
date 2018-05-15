@@ -10,6 +10,7 @@ export class EventosMenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

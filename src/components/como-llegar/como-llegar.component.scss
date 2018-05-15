@@ -2,6 +2,11 @@ agm-map {
     height: 81.5vh;
 }
 
+.col-sm-8{
+    border-radius: 10px !important;
+    overflow: hidden;
+}
+
 .card {
     img {
         width: 100%;
@@ -43,16 +48,18 @@ agm-map {
 
 .card-title {
     position: absolute;
-   font-size: 150%;
+    font-size: 150%;
     filter: drop-shadow(rgba(0, 0, 0, 1) 2px 2px);
 }
 
 .sideL {
+    margin: 1% 0% 0% 1%;
     top: 0;
     left: 5%;
 }
 
 .sideR {
+    margin: 0% 1% 1% 0%;
     bottom: 0;
     right: 5%;
 }

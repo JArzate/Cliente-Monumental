@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row p-2 justify-content-center">
+    <div class="col-sm-3 align-items-center">
+      <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+    </div>
+    <div class="col-sm-9 text-center">
+      <h3>{{mensaje}}</h3>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="botones">
+    <div class="col-sm-6">
+      <button class="btn btn-danger btn-block" mat-dialog-close>Cancelar</button>
+    </div>
+    <div class="col-sm-6">
+      <button class="btn btn-warning btn-block" mat-dialog-close (click)="regresar()">Aceptar</button>
+    </div>
+  </div>
+
+</div>

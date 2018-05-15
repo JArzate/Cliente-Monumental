@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <div class="row filtro">
+    <img src="assets/imagenes/fondos/Fondo-Mapa.jpg" class="fondo">
+  </div>
+
+  <div class="row header align-items-center">
+    <div class="col-lg-1">
+      <img src="assets/imagenes/iconos/atras.png" height="120" [routerLink]="['/menu']">
+    </div>
+    <div class="col-lg-2">
+      <span class="texto-blanco font-36 atras">Atrás</span>
+    </div>
+    <div class="col-lg-9 text-left titulo-vista">
+      <span class="texto-blanco font-36">Mapa Interactivo</span>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6 justify-content-center">
+      <img src="assets/imagenes/fondos/Mapa-Plaza2.png" class="w-100">
+    </div>
+    <div class="col-sm-6 justify-content-center align-items-center p-5">
+      <button class="btn btn-block" id="palcos" (click)="MostrarVista('Palcos')">
+        <span class="texto">Vista Palcos</span>
+      </button>
+      <button class="btn btn-block" id="platea" (click)="MostrarVista('Platea')">
+        <span class="texto">Vista Platea</span>
+      </button>
+      <button class="btn btn-block" id="barrera" (click)="MostrarVista('Barrera')">
+        <span class="texto">Vista Barrera</span>
+      </button>
+      <button class="btn btn-block" id="tendido" (click)="MostrarVista('Tendido')">
+        <span class="texto">Vista Tendido</span>
+      </button>
+      <button class="btn btn-block" id="general" (click)="MostrarVista('General')">
+        <span class="texto">Vista General</span>
+      </button>
+      <button class="btn btn-block" id="ruedo" (click)="MostrarVista('Ruedo')">
+        <span class="texto">Vista del Ruedo</span>
+      </button>
+    </div>
+  </div>
+
+</div>

@@ -21,7 +21,7 @@ export class InicialComponent implements OnInit {
     //En cuanto inicie, esperara 1.5 segundos y comenzara a hablar
     setTimeout(
       () => {
-        window.speechSynthesis.speak(this.Speech);
+        //window.speechSynthesis.speak(this.Speech);
       }, 1500);
   }
 }

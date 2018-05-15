@@ -1,0 +1,55 @@
+.fondo {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.filtro::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+#flecha-adelante img{
+    transform: rotateY(180deg);
+}
+
+
+.col-sm-2{
+    position: relative;
+}
+
+.flecha{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    font-size: 800%;
+    color:white;
+}
+
+.flechaI{
+    left: 0;
+}
+
+.flechaR{
+    right: 0;
+}
+
+.img-width{
+    width: 33%;
+}
+
+.imagen-evento{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+button{
+    height: 100px;
+    font-size: 150%;
+}

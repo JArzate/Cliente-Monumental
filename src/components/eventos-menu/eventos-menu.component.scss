@@ -1,3 +1,10 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%)
+}
+
 .fondo {
     width: 100%;
     height: 100%;
@@ -7,14 +14,52 @@
 
 .filtro::after {
     content: '';
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: -1;
 }
 
-.col{
-    background: red;
-    border: 1px solid black;
+.col {
+    border-radius: 5px;
+    padding: 15% 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
+    filter: drop-shadow(black 5px 5px 5px);
+    h1 {
+        position: relative;
+        z-index: 2;
+        font-size: 350%;
+        filter: drop-shadow(black 2px 2px)
+    }
+    
+    &::after{
+        border-radius: 5px;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.fondo-corridas {
+    background-image: url(assets/imagenes/fondos/Fondo-Corridas.jpg);
+}
+
+.fondo-eventosM {
+    background-image: url(assets/imagenes/fondos/Fondo-EventoMusical.jpg);
+}
+
+.fondo-corridas::after {
+    background: linear-gradient(to top, rgba(217, 33, 41, 0.9), transparent);
+}
+
+.fondo-eventosM::after {
+    background: linear-gradient(to bottom, rgba(238, 122, 0, 1), transparent);
 }

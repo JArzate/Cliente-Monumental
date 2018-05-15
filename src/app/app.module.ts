@@ -1,11 +1,17 @@
+import { ZonaService } from './../servicios/zona/zona.service';
+import { ParticipanteService } from './../servicios/participante/participante.service';
+import { EventoService } from './../servicios/evento/evento.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
 
 //Estilos
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatProgressBarModule,
-  MatCardModule
+  MatCardModule,
+  MatDialogModule
 } from '@angular/material';
 
 
@@ -14,7 +20,7 @@ import {
 
 //Servicios
 import { FacebookModule } from 'ngx-facebook';
-import { AgmCoreModule } from '@agm/core';     
+import { AgmCoreModule } from '@agm/core';
 import { AgmDirectionModule } from 'agm-direction';
 
 //Rutas
@@ -31,6 +37,14 @@ import { ComoLlegarComponent } from './../components/como-llegar/como-llegar.com
 import { ModalDialogComponent } from './../components/modal-dialog/modal-dialog.component';
 import { ImprimirImagenComponent } from './../components/imprimir-imagen/imprimir-imagen.component';
 import { EventosMenuComponent } from './../components/eventos-menu/eventos-menu.component';
+import { MapaInteractivoComponent } from './../components/mapa-interactivo/mapa-interactivo.component';
+import { VisorComponent } from './../components/visor/visor.component';
+import { ListaEventosComponent } from './../components/lista-eventos/lista-eventos.component';
+import { FichaEventoComponent } from './../components/ficha-evento/ficha-evento.component';
+import { HttpModule } from '@angular/http';
+import { ProcesoCompraComponent } from './../components/proceso-compra/proceso-compra.component';
+import { FormsModule } from '@angular/forms';
+import { MensajeComponent } from './../components/mensaje/mensaje.component';
 
 
 @NgModule({
@@ -43,12 +57,20 @@ import { EventosMenuComponent } from './../components/eventos-menu/eventos-menu.
     ComoLlegarComponent,
     ModalDialogComponent,
     ImprimirImagenComponent,
-    EventosMenuComponent
+    EventosMenuComponent,
+    MapaInteractivoComponent,
+    VisorComponent,
+    ListaEventosComponent,
+    FichaEventoComponent,
+    ProcesoCompraComponent,
+    MensajeComponent
   ],
   imports: [
+    HttpModule,
     BrowserModule,
+    FormsModule,
     appRouting,
-    AgmCoreModule.forRoot({ 
+    AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDDDyV5ypJgFhT6YM4PEPT5mbdy8zCV9lA',
     }),
     AgmDirectionModule,
@@ -57,9 +79,17 @@ import { EventosMenuComponent } from './../components/eventos-menu/eventos-menu.
     BrowserAnimationsModule,
     //MaterialComponents
     MatProgressBarModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
-  providers: [],
+  entryComponents: [
+    VisorComponent,
+    MensajeComponent
+  ],
+  providers: [
+    EventoService,
+    ParticipanteService,
+    ZonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

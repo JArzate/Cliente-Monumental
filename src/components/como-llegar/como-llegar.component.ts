@@ -26,7 +26,7 @@ export class ComoLlegarComponent implements OnInit {
     this.Speech.text = this.Texto;
     setTimeout(
       () => {
-        // window.speechSynthesis.speak(this.Speech);
+       // window.speechSynthesis.speak(this.Speech);
       }, 1500);
   }
 

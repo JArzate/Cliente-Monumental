@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <div class="row filtro">
+    <img src="assets/imagenes/fondos/Fondo-Eventos.jpg" class="fondo">
+  </div>
+
+  <div class="row header align-items-center">
+    <div class="col-lg-1" (click)="regresar()">
+      <img src="assets/imagenes/iconos/atras.png" height="120">
+    </div>
+    <div class="col-lg-2">
+      <span class="texto-blanco font-36 atras">Atrás</span>
+    </div>
+    <div class="col-lg-9 text-left titulo-vista">
+      <span class="texto-blanco font-36">{{evento.titulo}}</span>
+    </div>
+  </div>
+
+  <div class="row justify-content-center" id="ficha-evento">
+    <div class="col-sm-6 text-center">
+      <img [src]="'assets/imagenes/eventos/' + evento.imagen" class="w-100" *ngIf="evento.tipo == 1">
+      <img [src]="'assets/imagenes/eventos/' + evento.imagen" class="img-width" *ngIf="evento.tipo == 2">
+    </div>
+    <div class="col-sm-4">
+      <table>
+        <tr>
+          <th>Zona</th>
+          <th>$</th>
+        </tr>
+        <tr *ngFor="let zona of zonas">
+          <td>{{zonasTxt[(zona.tipo_zona-1)]}}</td>
+          <td>$ {{zona.costo}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="row mt-3 justify-content-center">
+    <div class="col-sm-6  align-items-middle text-right">
+      <h2>{{evento.titulo}}</h2>
+      <h4>{{evento.fecha}}</h4>
+      <h4>Participantes:</h4>
+      <ul id="lista-participantes">
+        <li class="participante-item" *ngFor="let participante of participantes">
+          {{participante.nombre}}
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-4 align-content-center">
+      <button class="btn btn-warning w-100 h-100" [routerLink]="['proceso-compra',{evento_id:evento.evento_id}]">
+        Comprar tickets
+      </button>
+    </div>
+  </div>
+
+</div>
