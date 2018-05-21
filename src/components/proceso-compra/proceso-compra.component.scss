@@ -7,7 +7,7 @@
 
 .filtro::after {
     content: '';
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -28,28 +28,33 @@
     }
 }
 
-.palcos {
+.Palcos {
     background: rgb(114, 0, 0);
 }
 
-.platea {
+.Platea {
     background: rgb(144, 42, 49);
 }
 
-.barrera {
+.Barrera {
     background: rgb(180, 40, 0);
 }
 
-.tendido {
+.Tendido {
     background: rgb(201, 85, 0);
 }
 
-.general {
+.General {
     background: linear-gradient(to right, rgb(166, 124, 82) 50%, rgb(255, 176, 0) 50%);
 }
 
 .opacity {
     opacity: 0.5;
+}
+
+.noDisponible {
+    opacity: 0.5;
+    background: gray !important;
 }
 
 .titulo-paso {
@@ -166,12 +171,13 @@ input:checked+.slider:before {
 #paso1,
 #paso2,
 #paso3,
-#paso4 {
+#paso4,
+#paso5 {
     height: 72vh;
     align-items: center;
 }
 
-#paso5 {
+#paso6 {
     height: 100vh;
     align-items: center;
     img {
@@ -184,8 +190,8 @@ input:checked+.slider:before {
     transform: scale(1.1);
 }
 
-.fa-check{
-    color:rgb(255, 176, 0);
+.fa-check {
+    color: rgb(255, 176, 0);
     font-size: 450px;
 }
 
@@ -208,4 +214,73 @@ input:checked+.slider:before {
     100% {
         transform: rotate(360deg);
     }
+}
+
+.lista-secciones {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 3%;
+    padding: 0;
+}
+
+.item-seccion {
+    margin: 1% 0;
+    height: 100px;
+    width: 45%;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(45deg, rgba(238, 122, 0, 1), rgba(118, 4, 4, 1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.lista-asientos {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 3%;
+    .asiento-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        background: linear-gradient(45deg, rgba(238, 122, 0, 1), rgba(118, 4, 4, 1));
+        color: white;
+        font-size: 50px;
+    }
+    .seleccionado {
+        background: rgb(255, 176, 0);
+    }
+}
+
+ul {
+    padding: 0;
+}
+
+.num-asiento {
+    display: inline-block;
+    &:not(:last-child)::after {
+        content: ',';
+    }
+}
+
+.ticket {
+    border-radius: 10px;
+    background: white;
+    padding: 3%;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+#paso6 .loader2 {
+    left: 37%;
+    top: -230%;
 }

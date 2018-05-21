@@ -25,12 +25,13 @@ export class FichaEventoComponent implements OnInit {
     this._route.params.forEach(
       (parametro) => {
         let evento_id: string = parametro['evento_id'];
+        console.log(evento_id, "Evento que llego");
         if (evento_id) {
           this._eventoService.getEventoPorId(evento_id)
             .subscribe(
               (respuesta: any) => {
                 let evento = respuesta.evento;
-                console.log(evento,"evento")
+                console.log(evento, "!!!@!@!@!@!@");
                 this.evento = new Evento({
                   evento_id: evento._id,
                   titulo: evento.titulo,
@@ -69,17 +70,15 @@ export class FichaEventoComponent implements OnInit {
                                 costo: zona.costo
                               });
 
-                              if (this.evento.tipo == 1) {
-                                //Agrega solo las zonas diferentes 
-                                let index = this.zonas.findIndex(
-                                  (zonaL) => {
-                                    return zona.tipo_zona == zonaL.tipo_zona;
-                                  });
+                              //Agrega solo las zonas diferentes 
+                              let index = this.zonas.findIndex(
+                                (zonaL) => {
+                                  return zona.tipo_zona == zonaL.tipo_zona;
+                                });
 
-                                if (index == -1) {
-                                  this.zonas.push(zonaNueva);
-                                  console.log(this.zonas, "res")
-                                }
+                              if (index == -1) {
+                                this.zonas.push(zonaNueva);
+                                console.log(this.zonas, "res");
                               }
                             });
                           },
@@ -104,7 +103,7 @@ export class FichaEventoComponent implements OnInit {
   }
 
   regresar = () => {
-    this._router.navigate(['menu','eventos','lista-eventos',{tipo:this.evento.tipo}]);
+    this._router.navigate(['menu', 'eventos', 'lista-eventos', { tipo: this.evento.tipo }]);
   }
 
 }

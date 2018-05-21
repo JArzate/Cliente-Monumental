@@ -17,11 +17,19 @@ export class ListaEventosComponent implements OnInit {
   ant_Pagina: number = 0;
   tipo_Evento: number;
   total_Eventos: number;
+
+  Text: string;
+  Speech = new SpeechSynthesisUtterance();
   constructor(public _route: ActivatedRoute, public _router: Router, public _eventoService: EventoService, public _participanteService: ParticipanteService) {
 
   }
 
   ngOnInit() {
+    this.Text = "Utiliza las flechas que están a los lados para desplegar más eventos; y si deseas ver un evento, preciona su imagen, así, veras más detalles de este.";
+    this.Speech.text = this.Text;
+    setTimeout(() => {
+     // window.speechSynthesis.speak(this.Speech);
+    }, 1500);
     //Se obtiene el parametro que se envia por router para saber el tipo de evento
     this._route.params.forEach(
       //por cada parametro

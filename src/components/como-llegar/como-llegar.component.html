@@ -50,7 +50,7 @@
       </div>
 
     </div>
-    <div class="col-sm-8 align-items-center">
+    <div class="col-sm-8 align-items-center" style="transition: none;">
       <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [streetViewControl]="true">
         <!-- Marcador de rutas -->
         <agm-direction *ngIf="Direccion" [origin]="Direccion.Origen" [destination]="Direccion.Destino" [travelMode]="'WALKING'"></agm-direction>

@@ -45,6 +45,7 @@ import { HttpModule } from '@angular/http';
 import { ProcesoCompraComponent } from './../components/proceso-compra/proceso-compra.component';
 import { FormsModule } from '@angular/forms';
 import { MensajeComponent } from './../components/mensaje/mensaje.component';
+import { AsientoService } from '../servicios/asiento/asiento.service';
 
 
 @NgModule({
@@ -89,7 +90,8 @@ import { MensajeComponent } from './../components/mensaje/mensaje.component';
   providers: [
     EventoService,
     ParticipanteService,
-    ZonaService],
+    ZonaService,
+    AsientoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
